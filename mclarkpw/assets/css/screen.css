@@ -1,0 +1,151 @@
+/* line 17, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: syncopate;
+  src: url("/static/fonts/syncopate/Syncopate-Regular.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: syncopate;
+  src: url("/static/fonts/syncopate/Syncopate-Bold.ttf");
+  font-weight: bold;
+}
+
+/*** Color definitions ***/
+/**************************/
+/*** constants ***/
+/*****************/
+/* line 14, ../../compass/sass/screen.scss */
+html {
+  box-sizing: border-box;
+  font-size: 24px;
+  line-height: 26px;
+  background: #fff;
+}
+
+/* line 21, ../../compass/sass/screen.scss */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* line 25, ../../compass/sass/screen.scss */
+body {
+  background: #fff;
+}
+
+/* line 29, ../../compass/sass/screen.scss */
+.gutters, #main {
+  border-width: 0 15px;
+  border-color: #fff;
+  border-style: solid;
+}
+
+/* line 35, ../../compass/sass/screen.scss */
+header {
+  width: 100%;
+  text-align: center;
+  color: #0e1c38;
+  padding: 15px;
+  font-family: syncopate, arial, sans-serif;
+  height: 85px;
+}
+/* line 43, ../../compass/sass/screen.scss */
+header h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+/* line 48, ../../compass/sass/screen.scss */
+header h2 {
+  font-size: 0.75rem;
+}
+
+/* line 53, ../../compass/sass/screen.scss */
+nav {
+  border-right: 15px solid white;
+  width: 25%;
+  height: 100%;
+  position: fixed;
+  top: 85px;
+  right: 0;
+  background: #555;
+  height: 300px;
+}
+/* line 63, ../../compass/sass/screen.scss */
+nav a {
+  width: 100%;
+  height: 25%;
+  border-bottom: 15px solid white;
+}
+
+/* line 70, ../../compass/sass/screen.scss */
+#main {
+  width: 75%;
+  background: #bbb;
+  float: left;
+  height: 300px;
+}

@@ -1,0 +1,76 @@
+@import "compass/reset";
+@import "fonts";
+
+/*** Color definitions ***/
+
+$darkblue: #0e1c38;
+/**************************/
+
+/*** constants ***/
+
+$gutter-width: 15px;
+/*****************/
+
+html {
+  box-sizing: border-box;
+  font-size: 24px;
+  line-height: 26px;
+  background: #fff;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit; 
+}
+
+body {
+  background: #fff;
+}
+
+.gutters {
+  border-width: 0 $gutter-width;
+  border-color: #fff;
+  border-style: solid;
+}
+
+header {
+  width: 100%;
+  text-align: center;
+  color: $darkblue;
+  padding: 15px;
+  font-family: syncopate, arial, sans-serif;
+  height: 85px;
+  
+  h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+  h2 {
+    font-size: 0.75rem; 
+  }
+}
+
+nav {
+  border-right: $gutter-width solid #fff;
+  width: 25%;
+  height: 100%;
+  position: fixed;
+  top: 85px;
+  right: 0;
+  background: #555;
+  height: 300px;
+  
+  a {
+    width: 100%;
+    height: 25%;
+    border-bottom: $gutter-width solid #fff; 
+  }
+}
+
+#main {
+  @extend .gutters;
+  width: 75%;
+  background: #bbb;
+  float: left;
+  height: 300px;
+}
