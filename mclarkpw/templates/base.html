@@ -1,0 +1,33 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{% block title %}Michael Clark{% endblock title %}</title>
+		{% block styles %}
+		    <link rel="stylesheet" href="{% static 'css/screen.css' %}" type="text/css" />
+		{% endblock styles %}
+		
+		{% block scripts %}
+		
+		{% endblock scripts %}
+	</head>
+	<body>
+		<header>
+			{% include 'header.html' %}
+		</header>
+		<nav>
+			<a></a>
+			<a></a>
+			<a></a>
+			<a></a>
+		</nav>
+		<div id="main">
+			{% block maincontent %}
+			
+			{% endblock maincontent %}
+		</div>
+		<footer>
+			
+		</footer>		
+	</body>
+</html>
