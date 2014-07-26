@@ -5,8 +5,10 @@
 		<title>{% block title %}Michael Clark{% endblock title %}</title>
 		{% block styles %}
 		    <link rel="stylesheet" href="{% static 'css/screen.css' %}" type="text/css" />
+		    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css" />
 		{% endblock styles %}
-		
+            <script type="text/javascript" src="{% static 'js/jquery-2.1.1.min.js' %}"></script>
+            <script type="text/javascript" src="{% static 'js/nav.js' %}"></script> 
 		{% block scripts %}
 		
 		{% endblock scripts %}
@@ -16,12 +18,12 @@
 			{% include 'header.html' %}
 		</header>
 		<nav>
-			<a></a>
-			<a></a>
-			<a></a>
-			<a></a>
+			<a href="#"><i class="fa"></i></a>
+			<a href="#"><i class="fa"></i></a>
+			<a href="#"><i class="fa"></i></a>
+			<a href="#"><i class="fa"></i></a>
 		</nav>
-		<div id="main">
+		<div class="maincontent">
 			{% block maincontent %}
 			
 			{% endblock maincontent %}

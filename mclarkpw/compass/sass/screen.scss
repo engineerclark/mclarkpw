@@ -4,6 +4,10 @@
 /*** Color definitions ***/
 
 $darkblue: #0e1c38;
+$mediumblue: #0b2e74;
+$lightblue: #1a52c0;
+$lightestblue: #dce7fb;
+$teal: #71c0d3;
 /**************************/
 
 /*** constants ***/
@@ -24,6 +28,9 @@ html {
 
 body {
   background: #fff;
+  font-family: raleway, arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .gutters {
@@ -44,33 +51,189 @@ header {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 1.25rem;
+    margin: 0;
+    line-height: 1.25rem;
   }
   h2 {
-    font-size: 0.75rem; 
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+    margin: 0;
   }
 }
 
 nav {
   border-right: $gutter-width solid #fff;
   width: 25%;
-  height: 100%;
-  position: fixed;
+  height: calc(100% - 85px);
+  position: absolute;
   top: 85px;
   right: 0;
-  background: #555;
-  height: 300px;
+  transition: opacity 0.25s ease;
+  opacity: 1;
   
   a {
     width: 100%;
-    height: 25%;
-    border-bottom: $gutter-width solid #fff; 
+    height: calc(25% - #{$gutter-width});
+    margin-bottom: $gutter-width;
+    display: block;
+    background: $lightblue;
+  }
+  
+  &.docked {
+    position: fixed;
+    top: 0;
+    transition: opacity 0.25s ease;
+    opacity: 0.5;
   }
 }
 
-#main {
+.maincontent {
   @extend .gutters;
   width: 75%;
-  background: #bbb;
   float: left;
-  height: 300px;
+  overflow: auto;
+}
+
+.column {
+  float: left;
+  min-height: 500px;
+  
+  &.gr-small {
+    width: calc(38% - #{$gutter-width}); 
+    margin-right: $gutter-width;
+  }
+}
+
+.gr-small {
+  width: 38%;
+}
+
+.gr-large {
+  width: 62%;
+}
+
+h1 {
+  font-family: syncopate, arial, helvetica, sans-serif;
+  font-size: 3.95rem;
+  text-align: center;
+  line-height: 3.95rem;
+  margin: 2.5rem 0;  
+}
+h2 {
+  font-family: inherit;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+.section {
+  color: $lightestblue;
+  font-family: raleway, arial, helvetica, sans-serif; 
+}
+
+.bio {
+  background: $mediumblue;
+  color: $lightestblue;
+  
+  .bio-portrait {
+    width: 100%;
+    background: #fff;
+    overflow: auto;
+    text-align: center;
+    padding-bottom: $gutter-width;
+    
+    img {
+      margin: auto;
+      max-width: 100%;
+      display: block;
+    }
+  }
+  
+  .bio-text {
+    padding: 24px 42px;
+    line-height: 2rem;
+    
+    h2 {
+      color: $teal;
+    }
+    
+    p {
+      margin: 20px 0; 
+    }
+  }
+}
+
+.expertise {
+  background: $mediumblue;
+  
+  .area {
+    padding: 0 10% 6% 50%;
+    position: relative;
+    
+    %area-graphic {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 55%;      
+    }
+    
+    i.fa {
+      @extend %area-graphic;
+      font-size: 7.8rem;
+      opacity: 0.2;
+    }
+    
+    h2 {
+      margin-bottom: 0.5rem; 
+    }
+    
+    .coding-graph {
+      @extend %area-graphic;
+      width: 40%;
+      
+      .step {
+        text-align: right;
+        color: $darkblue;
+        width: 100%;
+        padding: 0 3%;
+        font-size: 0.7rem;
+        float: right;
+        line-height: 1.5rem;
+        height: 1.5rem;
+        overflow: hidden;
+        word-break: break-all;
+        
+        i {
+          display: block;
+          float: left;  
+        }
+        
+        &.beginning {
+          background: $lightestblue;
+        }
+        &.education {
+          background: $teal;
+          width: 80%;
+        }
+        &.pro {
+          background: $lightblue;
+          color: $lightestblue;
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+.button {
+  background: $lightblue;
+  color: $lightestblue;
+  width: 100%;
+  padding: 0 7%;
+  display: block;
+  line-height: 2rem;
+  margin: 1rem 0;
+}
+
+a.button {
+  text-decoration: none;  
 }

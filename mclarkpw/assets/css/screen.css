@@ -75,11 +75,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-weight: bold;
 }
 
+@font-face {
+  font-family: raleway;
+  src: url("/static/fonts/raleway/Raleway-Regular.otf");
+  font-weight: normal;
+}
+
 /*** Color definitions ***/
 /**************************/
 /*** constants ***/
 /*****************/
-/* line 14, ../../compass/sass/screen.scss */
+/* line 18, ../../compass/sass/screen.scss */
 html {
   box-sizing: border-box;
   font-size: 24px;
@@ -87,24 +93,27 @@ html {
   background: #fff;
 }
 
-/* line 21, ../../compass/sass/screen.scss */
+/* line 25, ../../compass/sass/screen.scss */
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
-/* line 25, ../../compass/sass/screen.scss */
+/* line 29, ../../compass/sass/screen.scss */
 body {
   background: #fff;
+  font-family: raleway, arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
-/* line 29, ../../compass/sass/screen.scss */
-.gutters, #main {
+/* line 36, ../../compass/sass/screen.scss */
+.gutters, .maincontent {
   border-width: 0 15px;
   border-color: #fff;
   border-style: solid;
 }
 
-/* line 35, ../../compass/sass/screen.scss */
+/* line 42, ../../compass/sass/screen.scss */
 header {
   width: 100%;
   text-align: center;
@@ -113,39 +122,206 @@ header {
   font-family: syncopate, arial, sans-serif;
   height: 85px;
 }
-/* line 43, ../../compass/sass/screen.scss */
+/* line 50, ../../compass/sass/screen.scss */
 header h1 {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.25rem;
+  margin: 0;
+  line-height: 1.25rem;
 }
-/* line 48, ../../compass/sass/screen.scss */
+/* line 57, ../../compass/sass/screen.scss */
 header h2 {
   font-size: 0.75rem;
+  line-height: 0.75rem;
+  margin: 0;
 }
 
-/* line 53, ../../compass/sass/screen.scss */
+/* line 64, ../../compass/sass/screen.scss */
 nav {
   border-right: 15px solid white;
   width: 25%;
-  height: 100%;
-  position: fixed;
+  height: calc(100% - 85px);
+  position: absolute;
   top: 85px;
   right: 0;
-  background: #555;
-  height: 300px;
+  transition: opacity 0.25s ease;
+  opacity: 1;
 }
-/* line 63, ../../compass/sass/screen.scss */
+/* line 74, ../../compass/sass/screen.scss */
 nav a {
   width: 100%;
-  height: 25%;
-  border-bottom: 15px solid white;
+  height: calc(25% - 15px);
+  margin-bottom: 15px;
+  display: block;
+  background: #1a52c0;
+}
+/* line 82, ../../compass/sass/screen.scss */
+nav.docked {
+  position: fixed;
+  top: 0;
+  transition: opacity 0.25s ease;
+  opacity: 0.5;
 }
 
-/* line 70, ../../compass/sass/screen.scss */
-#main {
+/* line 90, ../../compass/sass/screen.scss */
+.maincontent {
   width: 75%;
-  background: #bbb;
   float: left;
-  height: 300px;
+  overflow: auto;
+}
+
+/* line 97, ../../compass/sass/screen.scss */
+.column {
+  float: left;
+  min-height: 500px;
+}
+/* line 101, ../../compass/sass/screen.scss */
+.column.gr-small {
+  width: calc(38% - 15px);
+  margin-right: 15px;
+}
+
+/* line 107, ../../compass/sass/screen.scss */
+.gr-small {
+  width: 38%;
+}
+
+/* line 111, ../../compass/sass/screen.scss */
+.gr-large {
+  width: 62%;
+}
+
+/* line 115, ../../compass/sass/screen.scss */
+h1 {
+  font-family: syncopate, arial, helvetica, sans-serif;
+  font-size: 3.95rem;
+  text-align: center;
+  line-height: 3.95rem;
+  margin: 2.5rem 0;
+}
+
+/* line 122, ../../compass/sass/screen.scss */
+h2 {
+  font-family: inherit;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+/* line 128, ../../compass/sass/screen.scss */
+.section {
+  color: #dce7fb;
+  font-family: raleway, arial, helvetica, sans-serif;
+}
+
+/* line 133, ../../compass/sass/screen.scss */
+.bio {
+  background: #0b2e74;
+  color: #dce7fb;
+}
+/* line 137, ../../compass/sass/screen.scss */
+.bio .bio-portrait {
+  width: 100%;
+  background: #fff;
+  overflow: auto;
+  text-align: center;
+  padding-bottom: 15px;
+}
+/* line 144, ../../compass/sass/screen.scss */
+.bio .bio-portrait img {
+  margin: auto;
+  max-width: 100%;
+  display: block;
+}
+/* line 151, ../../compass/sass/screen.scss */
+.bio .bio-text {
+  padding: 24px 42px;
+  line-height: 2rem;
+}
+/* line 155, ../../compass/sass/screen.scss */
+.bio .bio-text h2 {
+  color: #71c0d3;
+}
+/* line 159, ../../compass/sass/screen.scss */
+.bio .bio-text p {
+  margin: 20px 0;
+}
+
+/* line 165, ../../compass/sass/screen.scss */
+.expertise {
+  background: #0b2e74;
+}
+/* line 168, ../../compass/sass/screen.scss */
+.expertise .area {
+  padding: 0 10% 6% 50%;
+  position: relative;
+}
+/* line 172, ../../compass/sass/screen.scss */
+.expertise .area i.fa, .expertise .area .coding-graph {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 55%;
+}
+/* line 179, ../../compass/sass/screen.scss */
+.expertise .area i.fa {
+  font-size: 7.8rem;
+  opacity: 0.2;
+}
+/* line 185, ../../compass/sass/screen.scss */
+.expertise .area h2 {
+  margin-bottom: 0.5rem;
+}
+/* line 189, ../../compass/sass/screen.scss */
+.expertise .area .coding-graph {
+  width: 40%;
+}
+/* line 193, ../../compass/sass/screen.scss */
+.expertise .area .coding-graph .step {
+  text-align: right;
+  color: #0e1c38;
+  width: 100%;
+  padding: 0 3%;
+  font-size: 0.7rem;
+  float: right;
+  line-height: 1.5rem;
+  height: 1.5rem;
+  overflow: hidden;
+  word-break: break-all;
+}
+/* line 205, ../../compass/sass/screen.scss */
+.expertise .area .coding-graph .step i {
+  display: block;
+  float: left;
+}
+/* line 210, ../../compass/sass/screen.scss */
+.expertise .area .coding-graph .step.beginning {
+  background: #dce7fb;
+}
+/* line 213, ../../compass/sass/screen.scss */
+.expertise .area .coding-graph .step.education {
+  background: #71c0d3;
+  width: 80%;
+}
+/* line 217, ../../compass/sass/screen.scss */
+.expertise .area .coding-graph .step.pro {
+  background: #1a52c0;
+  color: #dce7fb;
+  width: 50%;
+}
+
+/* line 227, ../../compass/sass/screen.scss */
+.button {
+  background: #1a52c0;
+  color: #dce7fb;
+  width: 100%;
+  padding: 0 7%;
+  display: block;
+  line-height: 2rem;
+  margin: 1rem 0;
+}
+
+/* line 237, ../../compass/sass/screen.scss */
+a.button {
+  text-decoration: none;
 }

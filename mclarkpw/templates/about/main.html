@@ -1,1 +1,74 @@
 {% extends "base.html" %}
+{% load static from staticfiles %}
+
+{% block maincontent %}
+<div class="bio section gr-small column">
+	<div class="bio-portrait">
+        <img src="{% static "images/mclark.jpg" %}" />
+    </div>
+    <div class="bio-text">
+    	<h2>about me</h2>
+    	<p>
+    		I’m a full-stack web developer, software engineer, amateur designer, and (as of 2013) father.
+    	</p>
+    	<p>
+            If you would like to engage me for a project, I want to hear from you!
+       </p>
+    </div>
+</div>
+
+<div class="expertise section gr-large column">
+    <h1>expertise</h1>
+    <div class="area">
+    	<i class="fa fa-code"></i>
+    	<div class="text">
+    	   <h2>web dev</h2>
+    	   <p>
+    			I specialise in HTML5, CSS3, and JS on the front-end, as well as python, C#, Java, and PHP server-side.
+    	   </p>
+    	   <a href="#" class="button">see my work</a>
+    	</div>
+    </div>
+    <div class="area">
+        <i class="fa fa-terminal"></i>
+        <div class="text">
+            <h2>admin/ops</h2>
+            <p>
+                I configure linux boxen and serve web applications on them.
+            </p>
+            <p>
+                I automate my build and deployment processes.	
+            </p>
+        </div>
+    </div>
+    <div class="area">
+        <i class="fa fa-building"></i>
+        <div class="text">
+            <h2>enterprise</h2>
+            <p>
+                I work with service-oriented architecture and large relational databases. 
+            </p>
+        </div>
+    </div>
+    <div class="area">
+        <div class="coding-graph">
+        	<div class="beginning step">
+        		<i>1991</i>
+        		for fun and profit
+        	</div>
+            <div class="education step">
+                <i>1998</i>
+                formal CS education
+            </div>
+        	<div class="pro step">
+                <i>2008</i>
+                professional
+            </div>
+        </div>
+        <div class="text">
+            <h2>coding since 1991</h2>
+        </div>
+    </div>
+    
+</div>
+{% endblock maincontent %}
