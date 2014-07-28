@@ -15,3 +15,10 @@
   src: url("/static/fonts/raleway/Raleway-Regular.otf");
   font-weight: normal;
 }
+
+@font-face {
+  font-family: raleway;
+  src: url("/static/fonts/raleway/Raleway-Italic.otf");
+  font-weight: normal;
+  font-style: italic;
+}

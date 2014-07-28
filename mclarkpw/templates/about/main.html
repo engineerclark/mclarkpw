@@ -6,7 +6,7 @@
 	<div class="bio-portrait">
         <img src="{% static "images/mclark.jpg" %}" />
     </div>
-    <div class="bio-text">
+    <div class="bio-text bio-box">
     	<h2>about me</h2>
     	<p>
     		I’m a full-stack web developer, software engineer, amateur designer, and (as of 2013) father.
@@ -14,6 +14,15 @@
     	<p>
             If you would like to engage me for a project, I want to hear from you!
        </p>
+       <a class="button" href="#"><i class="fa fa-send"></i> contact michael</a>
+    </div>
+    <div class="bio-talents bio-box">
+    	<h3>a few things I do well:</h3>
+    	<ul>
+    		<li>Turn <em>any</em> design into a beautiful HTML5/CSS3/JS user experience.</li>
+    		<li>Intuitive data models on top of clean, normalised databases.</li>
+    		<li>DRY</li>
+    	</ul>
     </div>
 </div>
 
@@ -37,7 +46,7 @@
                 I configure linux boxen and serve web applications on them.
             </p>
             <p>
-                I automate my build and deployment processes.	
+                I automate build and deployment processes.	
             </p>
         </div>
     </div>
@@ -69,6 +78,9 @@
             <h2>coding since 1991</h2>
         </div>
     </div>
-    
 </div>
+
+{% include "about/positions.html" %}
+{% include "about/education.html" %}
+
 {% endblock maincontent %}
