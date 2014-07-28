@@ -12,4 +12,5 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$/?', MainView.as_view()),
     url(r'^about/', include('about.urls')),
+    url(r'^web/', include('webdev.urls')),
 )

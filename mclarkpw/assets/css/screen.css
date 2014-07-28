@@ -95,7 +95,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /******************
  * Shared elements
  */
-/* line 28, ../../compass/sass/screen.scss */
+/* line 30, ../../compass/sass/screen.scss */
 html {
   box-sizing: border-box;
   font-size: 24px;
@@ -103,17 +103,17 @@ html {
   background: #fff;
 }
 
-/* line 35, ../../compass/sass/screen.scss */
+/* line 37, ../../compass/sass/screen.scss */
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
-/* line 39, ../../compass/sass/screen.scss */
+/* line 41, ../../compass/sass/screen.scss */
 .fa {
   box-sizing: content-box;
 }
 
-/* line 43, ../../compass/sass/screen.scss */
+/* line 45, ../../compass/sass/screen.scss */
 body {
   background: #fff;
   font-family: raleway, arial, sans-serif;
@@ -121,14 +121,14 @@ body {
   line-height: 1.5rem;
 }
 
-/* line 50, ../../compass/sass/screen.scss */
+/* line 52, ../../compass/sass/screen.scss */
 .gutters, .maincontent {
   border-width: 0 15px;
   border-color: #fff;
   border-style: solid;
 }
 
-/* line 56, ../../compass/sass/screen.scss */
+/* line 58, ../../compass/sass/screen.scss */
 h1 {
   font-family: syncopate, arial, helvetica, sans-serif;
   font-size: 3.95rem;
@@ -137,14 +137,21 @@ h1 {
   margin: 2.5rem 0;
 }
 
-/* line 63, ../../compass/sass/screen.scss */
+/* line 65, ../../compass/sass/screen.scss */
 h2 {
   font-family: inherit;
   font-size: 2rem;
   line-height: 2rem;
 }
 
-/* line 69, ../../compass/sass/screen.scss */
+/* line 70, ../../compass/sass/screen.scss */
+h3 {
+  font-family: inherit;
+  font-size: 1.33rem;
+  line-height: 1.33rem;
+}
+
+/* line 76, ../../compass/sass/screen.scss */
 .section {
   color: #dce7fb;
   font-family: raleway, arial, helvetica, sans-serif;
@@ -153,12 +160,12 @@ h2 {
   border-bottom: 15px solid white;
   padding-bottom: 2rem;
 }
-/* line 77, ../../compass/sass/screen.scss */
+/* line 84, ../../compass/sass/screen.scss */
 .section.column {
   clear: none;
 }
 
-/* line 82, ../../compass/sass/screen.scss */
+/* line 89, ../../compass/sass/screen.scss */
 .button {
   background: #1a52c0;
   color: #dce7fb;
@@ -169,12 +176,12 @@ h2 {
   margin: 1rem 0;
 }
 
-/* line 92, ../../compass/sass/screen.scss */
+/* line 99, ../../compass/sass/screen.scss */
 a.button {
   text-decoration: none;
 }
 
-/* line 96, ../../compass/sass/screen.scss */
+/* line 103, ../../compass/sass/screen.scss */
 header {
   width: 100%;
   text-align: center;
@@ -183,7 +190,7 @@ header {
   font-family: syncopate, arial, sans-serif;
   height: 85px;
 }
-/* line 104, ../../compass/sass/screen.scss */
+/* line 111, ../../compass/sass/screen.scss */
 header h1 {
   text-transform: uppercase;
   font-weight: bold;
@@ -191,14 +198,14 @@ header h1 {
   margin: 0;
   line-height: 1.25rem;
 }
-/* line 111, ../../compass/sass/screen.scss */
+/* line 118, ../../compass/sass/screen.scss */
 header h2 {
   font-size: 0.75rem;
   line-height: 0.75rem;
   margin: 0;
 }
 
-/* line 118, ../../compass/sass/screen.scss */
+/* line 125, ../../compass/sass/screen.scss */
 nav {
   border-right: 15px solid white;
   width: 25%;
@@ -210,7 +217,7 @@ nav {
   opacity: 1;
   color: #dce7fb;
 }
-/* line 129, ../../compass/sass/screen.scss */
+/* line 136, ../../compass/sass/screen.scss */
 nav a {
   width: 100%;
   height: calc(25% - 15px);
@@ -225,7 +232,7 @@ nav a {
   box-sizing: border-box;
   overflow: hidden;
 }
-/* line 143, ../../compass/sass/screen.scss */
+/* line 150, ../../compass/sass/screen.scss */
 nav a i.fa {
   vertical-align: middle;
   position: absolute;
@@ -237,7 +244,7 @@ nav a i.fa {
   margin-top: calc(-250px);
   display: block;
 }
-/* line 155, ../../compass/sass/screen.scss */
+/* line 162, ../../compass/sass/screen.scss */
 nav a b {
   position: absolute;
   top: 0;
@@ -253,12 +260,12 @@ nav a b {
   text-align: center;
   font-size: 2rem;
 }
-/* line 170, ../../compass/sass/screen.scss */
+/* line 177, ../../compass/sass/screen.scss */
 nav a:hover b {
   transition: opacity 0.25s ease;
   opacity: 1.0;
 }
-/* line 177, ../../compass/sass/screen.scss */
+/* line 184, ../../compass/sass/screen.scss */
 nav.docked {
   position: fixed;
   top: 0;
@@ -266,30 +273,30 @@ nav.docked {
   opacity: 0.5;
 }
 
-/* line 185, ../../compass/sass/screen.scss */
+/* line 192, ../../compass/sass/screen.scss */
 .maincontent {
   width: 75%;
   float: left;
   overflow: auto;
 }
 
-/* line 192, ../../compass/sass/screen.scss */
+/* line 199, ../../compass/sass/screen.scss */
 .column {
   float: left;
   min-height: 500px;
 }
-/* line 196, ../../compass/sass/screen.scss */
+/* line 203, ../../compass/sass/screen.scss */
 .column.gr-small, .position .column.info, .school .column.info {
   width: calc(38% - 15px);
   margin-right: 15px;
 }
 
-/* line 202, ../../compass/sass/screen.scss */
+/* line 209, ../../compass/sass/screen.scss */
 .gr-small, .position .info, .school .info {
   width: 38%;
 }
 
-/* line 206, ../../compass/sass/screen.scss */
+/* line 213, ../../compass/sass/screen.scss */
 .gr-large, .position .description, .school .description {
   width: 62%;
 }
@@ -496,4 +503,73 @@ nav.docked {
 /* line 190, ../../compass/sass/_about.scss */
 .education .school .description {
   color: #ffb8b8;
+}
+
+/* line 1, ../../compass/sass/_webdev.scss */
+.webdev {
+  background: #0b2e74;
+  overflow: auto;
+}
+/* line 5, ../../compass/sass/_webdev.scss */
+.webdev .column {
+  width: 50%;
+  padding: 0 4%;
+  float: left;
+  text-align: center;
+}
+/* line 11, ../../compass/sass/_webdev.scss */
+.webdev .column h2 {
+  margin: 1rem 0;
+}
+/* line 14, ../../compass/sass/_webdev.scss */
+.webdev .column h2 i.fa {
+  font-size: 3.6rem;
+}
+/* line 19, ../../compass/sass/_webdev.scss */
+.webdev .column p {
+  color: #00aeef;
+}
+/* line 23, ../../compass/sass/_webdev.scss */
+.webdev .column .tool {
+  margin-bottom: 1rem;
+}
+
+/* line 29, ../../compass/sass/_webdev.scss */
+.recent-work {
+  background: #0e1c38;
+  overflow: auto;
+}
+/* line 33, ../../compass/sass/_webdev.scss */
+.recent-work .column {
+  float: left;
+  padding: 0 4%;
+}
+/* line 37, ../../compass/sass/_webdev.scss */
+.recent-work p, .recent-work ul {
+  color: #00aeef;
+}
+/* line 40, ../../compass/sass/_webdev.scss */
+.recent-work li {
+  padding-left: 1.2em;
+}
+/* line 43, ../../compass/sass/_webdev.scss */
+.recent-work li:before {
+  content: '';
+  display: inline-block;
+  font-family: FontAwesome;
+  width: 1.2em;
+  margin-left: -1.2em;
+  color: #39b54a;
+}
+/* line 53, ../../compass/sass/_webdev.scss */
+.recent-work .info h2 {
+  font-size: 1.33rem;
+}
+/* line 56, ../../compass/sass/_webdev.scss */
+.recent-work .info h3 {
+  font-size: 1rem;
+}
+/* line 60, ../../compass/sass/_webdev.scss */
+.recent-work .subsection {
+  margin-bottom: 2rem;
 }

@@ -1,0 +1,63 @@
+.webdev {
+  background: $mediumblue;
+  overflow: auto;
+  
+  .column {
+    width: 50%;
+    padding: 0 4%;
+    float: left;
+    text-align: center;
+    
+    h2 {
+      margin: 1rem 0;
+      
+      i.fa {
+        font-size: 3.6rem;  
+      }
+    }
+    
+    p {
+      color: $tealblue;  
+    }
+    
+    .tool {
+      margin-bottom: 1rem;  
+    }
+  }
+}
+
+.recent-work {
+  background: $darkblue;
+  overflow: auto;
+
+  .column {
+    float: left;
+    padding: 0 4%;
+  }
+  p, ul {
+    color: $tealblue;  
+  }
+  li {
+    padding-left: 1.2em;
+    
+    &:before {
+      content: '';
+      display: inline-block;
+      font-family: FontAwesome;
+      width: 1.2em;
+      margin-left: -1.2em;
+      color: $checkmark;  
+    }  
+  }
+  .info {
+    h2 {
+      font-size: 1.33rem;
+    }
+    h3 {
+      font-size: 1rem;  
+    }  
+  }
+  .subsection {
+    margin-bottom: 2rem;  
+  }
+}

@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block maincontent %}
+<div class="webdev section">
+	<h1>web development</h1>
+	<div class="tools column">
+		<h2>tools</h2>
+		<h2><i class="fa fa-wrench"></i></h2>
+		
+		<div class="tool">
+			<h3>servers</h3>
+			<p>
+				I use debian/ubuntu at home and for hosting.  Proficient on the command line, comfortable with all major *nix distros.
+			</p>
+		</div>
+		<div class="tool">
+            <h3>ui tools &amp; standards</h3>
+            <p>
+                HTML5, CSS3, Responsive Web Design, JS, SASS, Compass, Django template language, Razor (ASP.NET MVC view engine), jQuery, JSP
+            </p>
+        </div>
+        <div class="tool">
+            <h3>languages</h3>
+            <p>
+                Python, PHP, C#, Java, JS
+            </p>
+        </div>
+        <div class="tool">
+            <h3>frameworks</h3>
+            <p>
+                Django, CakePHP, CodeIgniter, WP, ASP.NET MVC
+            </p>
+        </div>
+		
+	</div>
+	<div class="methods column">
+		<h2>methods</h2>
+		<h2><i class="fa fa-tasks"></i></h2>
+		<div class="tool">
+			<h3>philosophy</h3>
+			<p>
+				I find incremental and iterative Agile methods effective for projects at all scales. I am a Certified Scrum Master.
+			</p>
+		</div>
+		<div class="tool">
+			<h3>version control</h3>
+			<p>
+				Git, for all in-house projects.  I also use mercurial, SVN, and TFS when required.
+			</p>
+		</div>
+		<div class="tool">
+			<h3>project management</h3>
+			<p>
+				I use Redmine and Trac (integrated with git) for my in-house projects.  I also work with TFS.
+			</p>
+		</div>
+	</div>
+</div>
+
+{% include "webdev/recentwork.html" %}
+{% endblock maincontent %}
