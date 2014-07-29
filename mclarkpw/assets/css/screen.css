@@ -538,21 +538,24 @@ nav.docked {
 .recent-work {
   background: #0e1c38;
   overflow: auto;
+  padding-bottom: 0;
 }
-/* line 33, ../../compass/sass/_webdev.scss */
+/* line 34, ../../compass/sass/_webdev.scss */
 .recent-work .column {
   float: left;
   padding: 0 4%;
+  overflow: auto;
+  margin-bottom: 3rem;
 }
-/* line 37, ../../compass/sass/_webdev.scss */
+/* line 40, ../../compass/sass/_webdev.scss */
 .recent-work p, .recent-work ul {
   color: #00aeef;
 }
-/* line 40, ../../compass/sass/_webdev.scss */
+/* line 43, ../../compass/sass/_webdev.scss */
 .recent-work li {
   padding-left: 1.2em;
 }
-/* line 43, ../../compass/sass/_webdev.scss */
+/* line 46, ../../compass/sass/_webdev.scss */
 .recent-work li:before {
   content: '';
   display: inline-block;
@@ -561,15 +564,62 @@ nav.docked {
   margin-left: -1.2em;
   color: #39b54a;
 }
-/* line 53, ../../compass/sass/_webdev.scss */
+/* line 56, ../../compass/sass/_webdev.scss */
 .recent-work .info h2 {
   font-size: 1.33rem;
 }
-/* line 56, ../../compass/sass/_webdev.scss */
+/* line 59, ../../compass/sass/_webdev.scss */
 .recent-work .info h3 {
   font-size: 1rem;
 }
-/* line 60, ../../compass/sass/_webdev.scss */
+/* line 63, ../../compass/sass/_webdev.scss */
 .recent-work .subsection {
   margin-bottom: 2rem;
+}
+/* line 66, ../../compass/sass/_webdev.scss */
+.recent-work .screenshot img {
+  width: 100%;
+}
+/* line 69, ../../compass/sass/_webdev.scss */
+.recent-work .thumbnails {
+  background: #333;
+  clear: both;
+  padding: 3% 6%;
+  overflow: auto;
+  width: 100%;
+}
+/* line 76, ../../compass/sass/_webdev.scss */
+.recent-work .thumbnails .thumbnail {
+  width: 25%;
+  float: left;
+  position: relative;
+  box-sizing: content-box;
+}
+/* line 81, ../../compass/sass/_webdev.scss */
+.recent-work .thumbnails .thumbnail:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+/* line 87, ../../compass/sass/_webdev.scss */
+.recent-work .thumbnails .thumbnail a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  box-sizing: border-box;
+  border: 1em solid #333;
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #000;
+  background-size: contain;
+}
+/* line 102, ../../compass/sass/_webdev.scss */
+.recent-work .thumbnails .thumbnail img {
+  height: auto;
+  width: 100%;
+  position: relative;
 }
