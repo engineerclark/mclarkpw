@@ -18,10 +18,10 @@
 			{% include 'header.html' %}
 		</header>
 		<nav>
-			<a href="#"><i class="fa fa-book"></i><b>about michael</b></a>
-			<a href="#"><i class="fa fa-code"></i><b>web development</b></a>
-			<a href="#"><i class="fa fa-building"></i><b>enterprise</b></a>
-			<a href="#"><i class="fa fa-send"></i><b>contact michael</b></a>
+			<a href="{% url 'about.main' %}"><i class="fa fa-book"></i><b>about michael</b></a>
+			<a href="{% url 'webdev.main' %}"><i class="fa fa-code"></i><b>web development</b></a>
+			<a href="{% url 'enterprise.main' %}"><i class="fa fa-building"></i><b>enterprise</b></a>
+			<a href="{% url 'contact.main' %}"><i class="fa fa-send"></i><b>contact michael</b></a>
 		</nav>
 		<div class="maincontent">
 			{% block maincontent %}
