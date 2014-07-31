@@ -1,0 +1,27 @@
+.enterprise {
+  background: $mediumblue;
+  
+  .tools {
+    margin-bottom: 3rem;
+    width: 50%;
+    float: left;
+    text-align: center;
+    padding: 0 4%;
+    
+    &:nth-child(2n) {
+      clear: left; 
+    }
+    
+    h2 {
+      margin: 1rem 0;
+      
+      .fa {
+        font-size: 4rem;
+      }
+    }
+    
+    p {
+      color: $tealblue;  
+    }
+  } 
+}
