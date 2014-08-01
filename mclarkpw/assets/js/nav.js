@@ -17,4 +17,5 @@ $(document).ready(function() {
     }
     
     $(window).scroll(onScroll);
+    onScroll();
 });
