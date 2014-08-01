@@ -12,7 +12,7 @@
   }
   
   .bio-box {
-    padding: 24px 42px;
+    padding: 1rem 1.8rem;
     line-height: 2rem;
     border-bottom: $gutter-width solid #fff;
     &:last-of-type {
@@ -81,6 +81,13 @@
       @extend %area-graphic;
       font-size: 7.8rem;
       opacity: 0.2;
+    }
+    
+    @media screen and (max-width: $single-column-width) {
+      padding: 0 10% 6%;
+      i.fa, .coding-graph {
+        display: none;  
+      }
     }
     
     h2 {

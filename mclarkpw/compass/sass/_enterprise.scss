@@ -7,6 +7,9 @@
     float: left;
     text-align: center;
     padding: 0 4%;
+    @media screen and (max-width: $single-column-width) {
+      width: 100%;  
+    }
     
     &:nth-child(2n) {
       clear: left; 

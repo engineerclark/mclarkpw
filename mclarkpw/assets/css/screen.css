@@ -95,25 +95,37 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /******************
  * Shared elements
  */
-/* line 30, ../../compass/sass/screen.scss */
+/* line 32, ../../compass/sass/screen.scss */
 html {
   box-sizing: border-box;
-  font-size: 24px;
-  line-height: 26px;
+  font-size: 1.5em;
+  line-height: 1.7em;
   background: #fff;
 }
+@media screen and (max-width: 100em) {
+  /* line 32, ../../compass/sass/screen.scss */
+  html {
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 80em) {
+  /* line 32, ../../compass/sass/screen.scss */
+  html {
+    font-size: 1.5em;
+  }
+}
 
-/* line 37, ../../compass/sass/screen.scss */
+/* line 45, ../../compass/sass/screen.scss */
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
-/* line 41, ../../compass/sass/screen.scss */
+/* line 49, ../../compass/sass/screen.scss */
 .fa {
   box-sizing: content-box;
 }
 
-/* line 45, ../../compass/sass/screen.scss */
+/* line 53, ../../compass/sass/screen.scss */
 body {
   background: #fff;
   font-family: raleway, arial, sans-serif;
@@ -121,14 +133,14 @@ body {
   line-height: 1.5rem;
 }
 
-/* line 52, ../../compass/sass/screen.scss */
+/* line 61, ../../compass/sass/screen.scss */
 .gutters, .maincontent {
   border-width: 0 15px;
   border-color: #fff;
   border-style: solid;
 }
 
-/* line 58, ../../compass/sass/screen.scss */
+/* line 67, ../../compass/sass/screen.scss */
 h1 {
   font-family: syncopate, arial, helvetica, sans-serif;
   font-size: 3.95rem;
@@ -137,21 +149,21 @@ h1 {
   margin: 2.5rem 0;
 }
 
-/* line 65, ../../compass/sass/screen.scss */
+/* line 74, ../../compass/sass/screen.scss */
 h2 {
   font-family: inherit;
   font-size: 2rem;
   line-height: 2rem;
 }
 
-/* line 70, ../../compass/sass/screen.scss */
+/* line 79, ../../compass/sass/screen.scss */
 h3 {
   font-family: inherit;
   font-size: 1.33rem;
   line-height: 1.33rem;
 }
 
-/* line 76, ../../compass/sass/screen.scss */
+/* line 85, ../../compass/sass/screen.scss */
 .section {
   color: #dce7fb;
   font-family: raleway, arial, helvetica, sans-serif;
@@ -160,12 +172,12 @@ h3 {
   border-bottom: 15px solid white;
   padding-bottom: 2rem;
 }
-/* line 84, ../../compass/sass/screen.scss */
+/* line 93, ../../compass/sass/screen.scss */
 .section.column {
   clear: none;
 }
 
-/* line 89, ../../compass/sass/screen.scss */
+/* line 98, ../../compass/sass/screen.scss */
 .button {
   background: #1a52c0;
   color: #dce7fb;
@@ -174,30 +186,37 @@ h3 {
   display: block;
   line-height: 2rem;
   margin: 1rem 0;
+  font-size: 1rem;
 }
 
-/* line 99, ../../compass/sass/screen.scss */
+/* line 109, ../../compass/sass/screen.scss */
 button.button {
   border: 0;
   font-size: 1rem;
   cursor: pointer;
 }
 
-/* line 105, ../../compass/sass/screen.scss */
+/* line 115, ../../compass/sass/screen.scss */
 a.button {
   text-decoration: none;
 }
 
-/* line 109, ../../compass/sass/screen.scss */
+/* line 119, ../../compass/sass/screen.scss */
 header {
   width: 100%;
   text-align: center;
   color: #0e1c38;
   padding: 15px;
   font-family: syncopate, arial, sans-serif;
-  height: 85px;
+  height: 3.5rem;
 }
-/* line 117, ../../compass/sass/screen.scss */
+@media screen and (max-width: 70em) {
+  /* line 119, ../../compass/sass/screen.scss */
+  header {
+    height: 7rem;
+  }
+}
+/* line 130, ../../compass/sass/screen.scss */
 header h1 {
   text-transform: uppercase;
   font-weight: bold;
@@ -205,26 +224,41 @@ header h1 {
   margin: 0;
   line-height: 1.25rem;
 }
-/* line 124, ../../compass/sass/screen.scss */
+@media screen and (max-width: 70em) {
+  /* line 130, ../../compass/sass/screen.scss */
+  header h1 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+}
+/* line 141, ../../compass/sass/screen.scss */
 header h2 {
   font-size: 0.75rem;
   line-height: 0.75rem;
   margin: 0;
 }
+@media screen and (max-width: 70em) {
+  /* line 141, ../../compass/sass/screen.scss */
+  header h2 {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+}
 
-/* line 131, ../../compass/sass/screen.scss */
+/* line 152, ../../compass/sass/screen.scss */
 nav {
   border-right: 15px solid white;
   width: 25%;
   height: calc(100% - 85px);
   position: absolute;
-  top: 85px;
+  top: 3.5rem;
   right: 0;
   transition: opacity 0.25s ease;
   opacity: 1;
   color: #dce7fb;
+  z-index: 100;
 }
-/* line 142, ../../compass/sass/screen.scss */
+/* line 164, ../../compass/sass/screen.scss */
 nav a {
   width: 100%;
   height: calc(25% - 15px);
@@ -239,7 +273,7 @@ nav a {
   box-sizing: border-box;
   overflow: hidden;
 }
-/* line 156, ../../compass/sass/screen.scss */
+/* line 178, ../../compass/sass/screen.scss */
 nav a i.fa {
   vertical-align: middle;
   position: absolute;
@@ -251,7 +285,7 @@ nav a i.fa {
   margin-top: calc(-250px);
   display: block;
 }
-/* line 168, ../../compass/sass/screen.scss */
+/* line 190, ../../compass/sass/screen.scss */
 nav a b {
   position: absolute;
   top: 0;
@@ -267,12 +301,36 @@ nav a b {
   text-align: center;
   font-size: 2rem;
 }
-/* line 183, ../../compass/sass/screen.scss */
+/* line 205, ../../compass/sass/screen.scss */
 nav a:hover b {
   transition: opacity 0.25s ease;
   opacity: 1.0;
 }
-/* line 190, ../../compass/sass/screen.scss */
+@media screen and (max-width: 80em) {
+  /* line 152, ../../compass/sass/screen.scss */
+  nav {
+    position: absolute;
+    top: 3.5rem;
+    height: 7rem;
+    width: 100%;
+    border-width: 0 15px;
+    border-color: #fff;
+    border-style: solid;
+  }
+  /* line 221, ../../compass/sass/screen.scss */
+  nav a {
+    width: 25%;
+    float: left;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 70em) {
+  /* line 152, ../../compass/sass/screen.scss */
+  nav {
+    top: 7rem;
+  }
+}
+/* line 230, ../../compass/sass/screen.scss */
 nav.docked {
   position: fixed;
   top: 0;
@@ -280,32 +338,64 @@ nav.docked {
   opacity: 0.5;
 }
 
-/* line 198, ../../compass/sass/screen.scss */
+/* line 238, ../../compass/sass/screen.scss */
 .maincontent {
   width: 75%;
   float: left;
   overflow: auto;
 }
+@media screen and (max-width: 80em) {
+  /* line 238, ../../compass/sass/screen.scss */
+  .maincontent {
+    width: 100%;
+    margin-top: 7rem;
+    border-top: 15px solid white;
+  }
+}
 
-/* line 205, ../../compass/sass/screen.scss */
+/* line 257, ../../compass/sass/screen.scss */
 .column {
   float: left;
   min-height: 500px;
 }
-/* line 209, ../../compass/sass/screen.scss */
+/* line 261, ../../compass/sass/screen.scss */
 .column.gr-small, .position .column.info, .school .column.info {
   width: calc(38% - 15px);
   margin-right: 15px;
 }
+@media screen and (max-width: 70em) {
+  /* line 261, ../../compass/sass/screen.scss */
+  .column.gr-small, .position .column.info, .school .column.info {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 70em) {
+  /* line 257, ../../compass/sass/screen.scss */
+  .column {
+    width: 100%;
+  }
+}
 
-/* line 215, ../../compass/sass/screen.scss */
+/* line 270, ../../compass/sass/screen.scss */
 .gr-small, .position .info, .school .info {
   width: 38%;
 }
+@media screen and (max-width: 70em) {
+  /* line 270, ../../compass/sass/screen.scss */
+  .gr-small, .position .info, .school .info {
+    width: 100%;
+  }
+}
 
-/* line 219, ../../compass/sass/screen.scss */
+/* line 275, ../../compass/sass/screen.scss */
 .gr-large, .position .description, .school .description {
   width: 62%;
+}
+@media screen and (max-width: 70em) {
+  /* line 275, ../../compass/sass/screen.scss */
+  .gr-large, .position .description, .school .description {
+    width: 100%;
+  }
 }
 
 /**************************/
@@ -324,7 +414,7 @@ nav.docked {
 }
 /* line 14, ../../compass/sass/_about.scss */
 .bio .bio-box {
-  padding: 24px 42px;
+  padding: 1rem 1.8rem;
   line-height: 2rem;
   border-bottom: 15px solid white;
 }
@@ -399,15 +489,25 @@ nav.docked {
   font-size: 7.8rem;
   opacity: 0.2;
 }
-/* line 86, ../../compass/sass/_about.scss */
+@media screen and (max-width: 70em) {
+  /* line 69, ../../compass/sass/_about.scss */
+  .expertise .area {
+    padding: 0 10% 6%;
+  }
+  /* line 88, ../../compass/sass/_about.scss */
+  .expertise .area i.fa, .expertise .area .coding-graph {
+    display: none;
+  }
+}
+/* line 93, ../../compass/sass/_about.scss */
 .expertise .area h2 {
   margin-bottom: 0.5rem;
 }
-/* line 90, ../../compass/sass/_about.scss */
+/* line 97, ../../compass/sass/_about.scss */
 .expertise .area .coding-graph {
   width: 40%;
 }
-/* line 94, ../../compass/sass/_about.scss */
+/* line 101, ../../compass/sass/_about.scss */
 .expertise .area .coding-graph .step {
   text-align: right;
   color: #0e1c38;
@@ -420,94 +520,94 @@ nav.docked {
   overflow: hidden;
   word-break: break-all;
 }
-/* line 106, ../../compass/sass/_about.scss */
+/* line 113, ../../compass/sass/_about.scss */
 .expertise .area .coding-graph .step i {
   display: block;
   float: left;
 }
-/* line 111, ../../compass/sass/_about.scss */
+/* line 118, ../../compass/sass/_about.scss */
 .expertise .area .coding-graph .step.beginning {
   background: #dce7fb;
 }
-/* line 114, ../../compass/sass/_about.scss */
+/* line 121, ../../compass/sass/_about.scss */
 .expertise .area .coding-graph .step.education {
   background: #71c0d3;
   width: 80%;
 }
-/* line 118, ../../compass/sass/_about.scss */
+/* line 125, ../../compass/sass/_about.scss */
 .expertise .area .coding-graph .step.pro {
   background: #1a52c0;
   color: #dce7fb;
   width: 50%;
 }
 
-/* line 128, ../../compass/sass/_about.scss */
+/* line 135, ../../compass/sass/_about.scss */
 .summary {
   width: 100%;
   padding: 0 20%;
   text-align: center;
 }
-/* line 133, ../../compass/sass/_about.scss */
+/* line 140, ../../compass/sass/_about.scss */
 .summary a.button {
   width: auto;
   display: inline-block;
   color: #0e1c38;
   background: #dce7fb;
 }
-/* line 140, ../../compass/sass/_about.scss */
+/* line 147, ../../compass/sass/_about.scss */
 .summary a {
   text-decoration: none;
   color: #71c0d3;
 }
 
-/* line 145, ../../compass/sass/_about.scss */
+/* line 152, ../../compass/sass/_about.scss */
 .position, .school {
   width: 100%;
   padding: 0 20%;
   overflow: auto;
   margin-bottom: 2rem;
 }
-/* line 151, ../../compass/sass/_about.scss */
+/* line 158, ../../compass/sass/_about.scss */
 .position .info, .school .info {
   float: left;
   text-align: right;
   font-size: 1.25rem;
 }
-/* line 157, ../../compass/sass/_about.scss */
+/* line 164, ../../compass/sass/_about.scss */
 .position .info .title, .position .info .name, .school .info .title, .school .info .name {
   font-weight: bold;
 }
-/* line 160, ../../compass/sass/_about.scss */
+/* line 167, ../../compass/sass/_about.scss */
 .position .info .dates, .school .info .dates {
   font-size: 1rem;
 }
-/* line 164, ../../compass/sass/_about.scss */
+/* line 171, ../../compass/sass/_about.scss */
 .position .description, .school .description {
   float: right;
   text-align: left;
   padding-left: 5%;
 }
 
-/* line 171, ../../compass/sass/_about.scss */
+/* line 178, ../../compass/sass/_about.scss */
 .positions {
   background: #0e1c38;
 }
-/* line 174, ../../compass/sass/_about.scss */
+/* line 181, ../../compass/sass/_about.scss */
 .positions .position .description {
   color: #00aeef;
 }
 
-/* line 179, ../../compass/sass/_about.scss */
+/* line 186, ../../compass/sass/_about.scss */
 .education {
   background: #ad132c;
   color: #ffe5e9;
 }
-/* line 184, ../../compass/sass/_about.scss */
+/* line 191, ../../compass/sass/_about.scss */
 .education .summary a.button {
   background: #ffe5e9;
   color: #ad132c;
 }
-/* line 190, ../../compass/sass/_about.scss */
+/* line 197, ../../compass/sass/_about.scss */
 .education .school .description {
   color: #ffb8b8;
 }
@@ -524,45 +624,51 @@ nav.docked {
   float: left;
   text-align: center;
 }
-/* line 11, ../../compass/sass/_webdev.scss */
+@media screen and (max-width: 70em) {
+  /* line 5, ../../compass/sass/_webdev.scss */
+  .webdev .column {
+    width: 100%;
+  }
+}
+/* line 14, ../../compass/sass/_webdev.scss */
 .webdev .column h2 {
   margin: 1rem 0;
 }
-/* line 14, ../../compass/sass/_webdev.scss */
+/* line 17, ../../compass/sass/_webdev.scss */
 .webdev .column h2 i.fa {
   font-size: 3.6rem;
 }
-/* line 19, ../../compass/sass/_webdev.scss */
+/* line 22, ../../compass/sass/_webdev.scss */
 .webdev .column p {
   color: #00aeef;
 }
-/* line 23, ../../compass/sass/_webdev.scss */
+/* line 26, ../../compass/sass/_webdev.scss */
 .webdev .column .tool {
   margin-bottom: 1rem;
 }
 
-/* line 29, ../../compass/sass/_webdev.scss */
+/* line 32, ../../compass/sass/_webdev.scss */
 .recent-work {
   background: #0e1c38;
   overflow: auto;
   padding-bottom: 0;
 }
-/* line 34, ../../compass/sass/_webdev.scss */
+/* line 37, ../../compass/sass/_webdev.scss */
 .recent-work .column {
   float: left;
   padding: 0 4%;
   overflow: auto;
   margin-bottom: 3rem;
 }
-/* line 40, ../../compass/sass/_webdev.scss */
+/* line 43, ../../compass/sass/_webdev.scss */
 .recent-work p, .recent-work ul {
   color: #00aeef;
 }
-/* line 43, ../../compass/sass/_webdev.scss */
+/* line 46, ../../compass/sass/_webdev.scss */
 .recent-work li {
   padding-left: 1.2em;
 }
-/* line 46, ../../compass/sass/_webdev.scss */
+/* line 49, ../../compass/sass/_webdev.scss */
 .recent-work li:before {
   content: '';
   display: inline-block;
@@ -571,23 +677,23 @@ nav.docked {
   margin-left: -1.2em;
   color: #39b54a;
 }
-/* line 56, ../../compass/sass/_webdev.scss */
+/* line 59, ../../compass/sass/_webdev.scss */
 .recent-work .info h2 {
   font-size: 1.33rem;
 }
-/* line 59, ../../compass/sass/_webdev.scss */
+/* line 62, ../../compass/sass/_webdev.scss */
 .recent-work .info h3 {
   font-size: 1rem;
 }
-/* line 63, ../../compass/sass/_webdev.scss */
+/* line 66, ../../compass/sass/_webdev.scss */
 .recent-work .subsection {
   margin-bottom: 2rem;
 }
-/* line 66, ../../compass/sass/_webdev.scss */
+/* line 69, ../../compass/sass/_webdev.scss */
 .recent-work .screenshot img {
   width: 100%;
 }
-/* line 69, ../../compass/sass/_webdev.scss */
+/* line 72, ../../compass/sass/_webdev.scss */
 .recent-work .thumbnails {
   background: #333;
   clear: both;
@@ -595,20 +701,20 @@ nav.docked {
   overflow: auto;
   width: 100%;
 }
-/* line 76, ../../compass/sass/_webdev.scss */
+/* line 79, ../../compass/sass/_webdev.scss */
 .recent-work .thumbnails .thumbnail {
   width: 25%;
   float: left;
   position: relative;
   box-sizing: content-box;
 }
-/* line 81, ../../compass/sass/_webdev.scss */
+/* line 84, ../../compass/sass/_webdev.scss */
 .recent-work .thumbnails .thumbnail:before {
   content: "";
   display: block;
   padding-top: 100%;
 }
-/* line 87, ../../compass/sass/_webdev.scss */
+/* line 90, ../../compass/sass/_webdev.scss */
 .recent-work .thumbnails .thumbnail a {
   position: absolute;
   top: 0;
@@ -624,7 +730,7 @@ nav.docked {
   background-color: #000;
   background-size: contain;
 }
-/* line 102, ../../compass/sass/_webdev.scss */
+/* line 105, ../../compass/sass/_webdev.scss */
 .recent-work .thumbnails .thumbnail img {
   height: auto;
   width: 100%;
@@ -643,19 +749,25 @@ nav.docked {
   text-align: center;
   padding: 0 4%;
 }
-/* line 11, ../../compass/sass/_enterprise.scss */
+@media screen and (max-width: 70em) {
+  /* line 4, ../../compass/sass/_enterprise.scss */
+  .enterprise .tools {
+    width: 100%;
+  }
+}
+/* line 14, ../../compass/sass/_enterprise.scss */
 .enterprise .tools:nth-child(2n) {
   clear: left;
 }
-/* line 15, ../../compass/sass/_enterprise.scss */
+/* line 18, ../../compass/sass/_enterprise.scss */
 .enterprise .tools h2 {
   margin: 1rem 0;
 }
-/* line 18, ../../compass/sass/_enterprise.scss */
+/* line 21, ../../compass/sass/_enterprise.scss */
 .enterprise .tools h2 .fa {
   font-size: 4rem;
 }
-/* line 23, ../../compass/sass/_enterprise.scss */
+/* line 26, ../../compass/sass/_enterprise.scss */
 .enterprise .tools p {
   color: #00aeef;
 }

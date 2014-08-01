@@ -21,6 +21,8 @@ $checkmark: #39b54a;
 /*** constants ***/
 
 $gutter-width: 15px;
+
+$single-column-width: 70em;
 /*****************/
 
 
@@ -29,9 +31,15 @@ $gutter-width: 15px;
  */
 html {
   box-sizing: border-box;
-  font-size: 24px;
-  line-height: 26px;
+  font-size: 1.5em;
+  line-height: 1.7em;
   background: #fff;
+  @media screen and (max-width: 100em) {
+    font-size: 1.2em;
+  }
+  @media screen and (max-width: 80em) {
+    font-size: 1.5em;  
+  }
 }
 
 *, *:before, *:after {
@@ -47,6 +55,7 @@ body {
   font-family: raleway, arial, sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
+  
 }
 
 .gutters {
@@ -94,6 +103,7 @@ h3 {
   display: block;
   line-height: 2rem;
   margin: 1rem 0;
+  font-size: 1rem;
 }
 
 button.button {
@@ -112,7 +122,10 @@ header {
   color: $darkblue;
   padding: 15px;
   font-family: syncopate, arial, sans-serif;
-  height: 85px;
+  height: 3.5rem;
+  @media screen and (max-width: $single-column-width) {
+    height: 7rem;  
+  }
   
   h1 {
     text-transform: uppercase;
@@ -120,11 +133,19 @@ header {
     font-size: 1.25rem;
     margin: 0;
     line-height: 1.25rem;
+    @media screen and (max-width: $single-column-width) {
+      font-size: 2.5rem;  
+      line-height: 2.5rem;
+    }
   }
   h2 {
     font-size: 0.75rem;
     line-height: 0.75rem;
     margin: 0;
+    @media screen and (max-width: $single-column-width) {
+      font-size: 1.5rem; 
+      line-height: 1.5rem;
+    }
   }
 }
 
@@ -133,11 +154,12 @@ nav {
   width: 25%;
   height: calc(100% - 85px);
   position: absolute;
-  top: 85px;
+  top: 3.5rem;
   right: 0;
   transition: opacity 0.25s ease;
   opacity: 1;
   color: $lightestblue;
+  z-index: 100;
   
   a {
     width: 100%;
@@ -187,6 +209,24 @@ nav {
     }
   }
   
+  @media screen and (max-width: 80em) {
+    position: absolute;
+    top: 3.5rem;
+    height: 7rem;
+    width: 100%;
+    border-width: 0 $gutter-width;
+    border-color: #fff;
+    border-style: solid;
+    
+    a {
+      width: 25%;
+      float: left;
+      height: 100%;
+    }
+  }
+  @media screen and (max-width: $single-column-width) {
+    top: 7rem;  
+  }
   &.docked {
     position: fixed;
     top: 0;
@@ -200,8 +240,20 @@ nav {
   width: 75%;
   float: left;
   overflow: auto;
+  
+  @media screen and (max-width: 80em) {
+    width: 100%;
+    margin-top: 7rem;
+    border-top: $gutter-width solid #fff;
+  }
+  
 }
 
+@mixin responsive-column {
+  @media screen and (max-width: $single-column-width) {
+    width: 100%;
+  }
+}
 .column {
   float: left;
   min-height: 500px;
@@ -209,15 +261,20 @@ nav {
   &.gr-small {
     width: calc(38% - #{$gutter-width}); 
     margin-right: $gutter-width;
+    @include responsive-column;
   }
+  
+  @include responsive-column;
 }
 
 .gr-small {
   width: 38%;
+  @include responsive-column;
 }
 
 .gr-large {
   width: 62%;
+  @include responsive-column;
 }
 /**************************/
 
