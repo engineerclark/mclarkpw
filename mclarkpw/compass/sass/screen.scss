@@ -96,6 +96,12 @@ h3 {
   margin: 1rem 0;
 }
 
+button.button {
+  border: 0;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
 a.button {
   text-decoration: none;  
 }
@@ -220,4 +226,5 @@ nav {
 @import "about";
 @import "webdev";
 @import "enterprise";
+@import "contact";
 
