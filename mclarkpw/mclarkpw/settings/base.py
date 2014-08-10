@@ -50,6 +50,7 @@ INSTALLED_APPS = (
     'webdev',
     'enterprise',
     'contact',
+    'south',
 )
 
 MIDDLEWARE_CLASSES = (
