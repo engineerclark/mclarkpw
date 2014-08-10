@@ -777,12 +777,21 @@ nav.docked {
   background: #0b2e74;
 }
 /* line 4, ../../compass/sass/_contact.scss */
+.contact .thankyou {
+  padding: 0 25%;
+  text-align: center;
+}
+/* line 7, ../../compass/sass/_contact.scss */
+.contact .thankyou h2 {
+  margin: 1rem 0;
+}
+/* line 12, ../../compass/sass/_contact.scss */
 .contact form {
   width: 100%;
   padding: 0 25%;
   text-align: left;
 }
-/* line 9, ../../compass/sass/_contact.scss */
+/* line 17, ../../compass/sass/_contact.scss */
 .contact form input, .contact form textarea {
   display: block;
   width: 100%;
@@ -792,13 +801,13 @@ nav.docked {
   font-size: 1.25rem;
   font-family: raleway, arial, helvetica, sans-serif;
 }
-/* line 19, ../../compass/sass/_contact.scss */
+/* line 27, ../../compass/sass/_contact.scss */
 .contact form input {
   height: 2rem;
   line-height: 2rem;
   padding: 0 1rem;
 }
-/* line 26, ../../compass/sass/_contact.scss */
+/* line 34, ../../compass/sass/_contact.scss */
 .contact form textarea {
   height: 9rem;
   padding: 1rem 1rem;
