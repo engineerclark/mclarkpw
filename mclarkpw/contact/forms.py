@@ -14,5 +14,6 @@ class ContactForm(forms.Form):
         contact_message.subject = self.cleaned_data['subject']
         contact_message.message = self.cleaned_data['message']
         contact_message.save()
+        contact_message.send()
         
     
