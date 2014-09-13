@@ -120,11 +120,15 @@ header {
   width: 100%;
   text-align: center;
   color: $darkblue;
-  padding: 15px;
+  padding: 0.6rem 25%;
+  position: relative;
   font-family: syncopate, arial, sans-serif;
   height: 3.5rem;
-  @media screen and (max-width: $single-column-width) {
-    height: 7rem;  
+  @media screen and (max-width: 80em) {
+    height: 7rem;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    height: auto;
   }
   
   h1 {
@@ -145,6 +149,26 @@ header {
     @media screen and (max-width: $single-column-width) {
       font-size: 1.5rem; 
       line-height: 1.5rem;
+    }
+  }
+  .account {
+    width: 25%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.6rem;
+    
+    p {
+      height: 50%;
+      width: 100%;
+      white-space: nowrap;
+    }
+    
+    @media screen and (max-width: 80em) {
+      width: 100%;
+      position: relative;
+      height: auto;
     }
   }
 }
@@ -209,9 +233,16 @@ nav {
     }
   }
   
+  &.docked {
+    position: fixed;
+    top: 0;
+    transition: opacity 0.25s ease;
+    opacity: 0.5;
+  }
+  
   @media screen and (max-width: 80em) {
-    position: absolute;
-    top: 3.5rem;
+    position: relative;
+    top: auto;
     height: 7rem;
     width: 100%;
     border-width: 0 $gutter-width;
@@ -223,15 +254,11 @@ nav {
       float: left;
       height: 100%;
     }
-  }
-  @media screen and (max-width: $single-column-width) {
-    top: 7rem;  
-  }
-  &.docked {
-    position: fixed;
-    top: 0;
-    transition: opacity 0.25s ease;
-    opacity: 0.5;
+    
+    &.docked {
+      position: inherit;
+      top: inherit;  
+    }
   }
 }
 
@@ -243,7 +270,6 @@ nav {
   
   @media screen and (max-width: 80em) {
     width: 100%;
-    margin-top: 7rem;
     border-top: $gutter-width solid #fff;
   }
   
@@ -284,4 +310,5 @@ nav {
 @import "webdev";
 @import "enterprise";
 @import "contact";
+@import "login";
 

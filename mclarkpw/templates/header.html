@@ -1,2 +1,10 @@
 <h1>Michael Clark</h1>
 <h2>Web &amp; Software Engineer</h2>
+<div class="account">
+    {% if user.is_authenticated %}
+        <p>Welcome, {{ user.first_name }}</p>
+        <p><a href="{% url 'logout' %}">logout</a></p>
+    {% else %}
+        <a href="{% url 'login' %}">login</a>
+    {% endif %}
+</div>

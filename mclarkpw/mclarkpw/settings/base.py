@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 from unipath import Path
+from datetime import timedelta
 
 PROJECT_DIR = Path(__file__).ancestor(3)
 MEDIA_ROOT = PROJECT_DIR.child("media")
@@ -50,6 +51,7 @@ INSTALLED_APPS = (
     'webdev',
     'enterprise',
     'contact',
+    'portal',
     'south',
 )
 
@@ -95,6 +97,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Authentication settings
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'portal.auth.TokenAuthBackend',
+)
+LOGIN_REDIRECT_URL = '/'
+DEFAULT_AUTHTOKEN_EXP = timedelta(days=7)
 
 # Email backend settings
 EMAIL_HOST = os.environ['EMAIL_HOST']
