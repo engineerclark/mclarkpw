@@ -154,12 +154,18 @@
   padding: 0 20%;
   overflow: auto;
   margin-bottom: 2rem;
+  @media screen and (max-width: $single-column-width) {
+      padding: 0 10%;
+  }
   
   .info {
     @extend .gr-small;
     float: left;
     text-align: right;
     font-size: 1.25rem;
+    @media screen and (max-width: $single-column-width) {
+      text-align: left;  
+    }
     
     .title, .name {
       font-weight: bold;  
@@ -173,6 +179,9 @@
     float: right;
     text-align: left;
     padding-left: 5%;
+    @media screen and (max-width: $single-column-width) {
+      padding-left: 0%;  
+    }
   }
 }
 .positions {

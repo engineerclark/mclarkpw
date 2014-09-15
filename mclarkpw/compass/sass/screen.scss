@@ -57,6 +57,16 @@ body {
   
 }
 
+.markdown {
+  p {
+    margin-bottom: 1rem;  
+  }  
+}
+
+.nobreak {
+  white-space: nowrap;  
+}
+
 .gutters {
   border-width: 0 $gutter-width;
   border-color: #fff;

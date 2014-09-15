@@ -1,6 +1,23 @@
 <div class="positions section">
     <h1>positions</h1>
     <h1><i class="fa fa-briefcase"></i></h1>
+    {% if user.is_authenticated %}
+        {% for position in positions %}
+	    <div class="position">
+	        <div class="info">
+	            <div class="title">{{ position.title }}</div>
+	            <div class="company">{{ position.company }}</div>
+	            <div class="dates">
+	            	<span class="nobreak">{{ position.start_date|date:'F Y' }}</span> - 
+	            	<span class="nobreak">{% if not position.end_date %}Present{% else%}{{ position.end_date|date:'F Y' }}{% endif %}</span>
+	            </div>
+	        </div>
+	        <div class="description markdown">
+	            {{ position.render_description|safe }}
+	        </div>
+	    </div>
+	    {% endfor %}
+    {% else %}
     <div class="summary">
     	<p>
     		I've been developing software and websites professionally since 2008.
@@ -10,28 +27,5 @@
     		You can also <a href="{% url 'webdev.main' %}#recent-work">check out my recent work</a>.
     	</p>
     </div>
-    {% comment %}
-    <div class="position">
-    	<div class="info">
-    		<div class="title">Software Engineer</div>
-    		<div class="company">Some Company</div>
-    		<div class="dates">March 2010 - July 2013</div>
-    	</div>
-    	<div class="description">
-    		Develop large-scale intranet and SaaS applications within a service-oriented architecture.  
-    		Work primarily in ASP.NET, with C#, SQL, WCF services, and MVC framework.
-    	</div>
-    </div>
-    <div class="position">
-        <div class="info">
-            <div class="title">Software Engineer</div>
-            <div class="company">Some Company</div>
-            <div class="dates">March 2010 - July 2013</div>
-        </div>
-        <div class="description">
-            Develop large-scale intranet and SaaS applications within a service-oriented architecture.  
-            Work primarily in ASP.NET, with C#, SQL, WCF services, and MVC framework.
-        </div>
-    </div>
-    {% endcomment %}
+    {% endif %}
 </div>
