@@ -36,4 +36,7 @@ class School(TimeStampedModel):
     objects = PositionManager()
     including_hidden = models.Manager()
     
+    def render_description(self):
+        return markdown.markdown(self.description)
+    
     
