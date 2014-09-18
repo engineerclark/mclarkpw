@@ -60,7 +60,10 @@ body {
 .markdown {
   p {
     margin-bottom: 1rem;  
-  }  
+  }
+  em {
+    font-style: italic;  
+  }
 }
 
 .nobreak {
@@ -291,7 +294,6 @@ nav {
 }
 .column {
   float: left;
-  min-height: 500px;
   
   &.gr-small {
     width: calc(38% - #{$gutter-width}); 
