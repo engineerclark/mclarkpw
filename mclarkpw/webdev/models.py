@@ -12,6 +12,9 @@ class Project(TimeStampedModel):
     
     def __unicode__(self):
         return self.name
+    
+    def render_description(self):
+        return markdown.markdown(self.description)
 
 class Screenshot(TimeStampedModel):
     image = models.ImageField(upload_to='screenshots')
