@@ -707,21 +707,25 @@ nav.docked {
   padding-bottom: 0;
 }
 /* line 37, ../../compass/sass/_webdev.scss */
+.recent-work .project {
+  display: none;
+}
+/* line 41, ../../compass/sass/_webdev.scss */
 .recent-work .column {
   float: left;
   padding: 0 4%;
   overflow: auto;
   margin-bottom: 3rem;
 }
-/* line 43, ../../compass/sass/_webdev.scss */
+/* line 47, ../../compass/sass/_webdev.scss */
 .recent-work p, .recent-work ul {
   color: #00aeef;
 }
-/* line 46, ../../compass/sass/_webdev.scss */
+/* line 50, ../../compass/sass/_webdev.scss */
 .recent-work li {
   padding-left: 1.2em;
 }
-/* line 49, ../../compass/sass/_webdev.scss */
+/* line 53, ../../compass/sass/_webdev.scss */
 .recent-work li:before {
   content: '';
   display: inline-block;
@@ -730,33 +734,33 @@ nav.docked {
   margin-left: -1.2em;
   color: #39b54a;
 }
-/* line 59, ../../compass/sass/_webdev.scss */
+/* line 63, ../../compass/sass/_webdev.scss */
 .recent-work .info h2 {
   font-size: 1.33rem;
 }
-/* line 62, ../../compass/sass/_webdev.scss */
+/* line 66, ../../compass/sass/_webdev.scss */
 .recent-work .info h3 {
   font-size: 1rem;
 }
-/* line 66, ../../compass/sass/_webdev.scss */
+/* line 70, ../../compass/sass/_webdev.scss */
 .recent-work .subsection {
   margin-bottom: 2rem;
 }
-/* line 69, ../../compass/sass/_webdev.scss */
+/* line 73, ../../compass/sass/_webdev.scss */
 .recent-work .project-url, .recent-work a {
   text-decoration: none;
   color: inherit;
   font-style: italic;
 }
-/* line 81, ../../compass/sass/_webdev.scss */
+/* line 85, ../../compass/sass/_webdev.scss */
 .recent-work em a {
   text-decoration: underline;
 }
-/* line 85, ../../compass/sass/_webdev.scss */
+/* line 89, ../../compass/sass/_webdev.scss */
 .recent-work .screenshot img {
   width: 100%;
 }
-/* line 88, ../../compass/sass/_webdev.scss */
+/* line 92, ../../compass/sass/_webdev.scss */
 .recent-work .thumbnails {
   background: #333;
   clear: both;
@@ -764,20 +768,26 @@ nav.docked {
   overflow: auto;
   width: 100%;
 }
-/* line 95, ../../compass/sass/_webdev.scss */
+/* line 99, ../../compass/sass/_webdev.scss */
 .recent-work .thumbnails .thumbnail {
   width: 25%;
   float: left;
   position: relative;
   box-sizing: content-box;
 }
-/* line 100, ../../compass/sass/_webdev.scss */
+@media screen and (max-width: 80em) {
+  /* line 99, ../../compass/sass/_webdev.scss */
+  .recent-work .thumbnails .thumbnail {
+    width: 50%;
+  }
+}
+/* line 109, ../../compass/sass/_webdev.scss */
 .recent-work .thumbnails .thumbnail:before {
   content: "";
   display: block;
   padding-top: 100%;
 }
-/* line 106, ../../compass/sass/_webdev.scss */
+/* line 115, ../../compass/sass/_webdev.scss */
 .recent-work .thumbnails .thumbnail a {
   position: absolute;
   top: 0;
@@ -793,7 +803,7 @@ nav.docked {
   background-color: #000;
   background-size: contain;
 }
-/* line 121, ../../compass/sass/_webdev.scss */
+/* line 130, ../../compass/sass/_webdev.scss */
 .recent-work .thumbnails .thumbnail a .label {
   width: 100%;
   height: 33%;
@@ -801,10 +811,12 @@ nav.docked {
   left: 0;
   bottom: 0;
   text-align: center;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.6);
   padding: 0.5rem;
+  border-top: 1px solid #aaa;
+  overflow: hidden;
 }
-/* line 132, ../../compass/sass/_webdev.scss */
+/* line 143, ../../compass/sass/_webdev.scss */
 .recent-work .thumbnails .thumbnail img {
   height: auto;
   width: 100%;

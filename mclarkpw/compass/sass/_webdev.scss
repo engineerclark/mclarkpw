@@ -33,7 +33,11 @@
   background: $darkblue;
   overflow: auto;
   padding-bottom: 0;
-
+  
+  .project {
+    display: none;  
+  }
+  
   .column {
     float: left;
     padding: 0 4%;
@@ -97,6 +101,11 @@
       float: left;
       position: relative;
       box-sizing: content-box;
+      
+      @media screen and (max-width: 80em) {
+        width: 50%;  
+      }
+      
       &:before {
         content: "";
         display: block;
@@ -125,8 +134,10 @@
           left: 0;
           bottom: 0;
           text-align: center;
-          background: rgba(0,0,0,0.8);
+          background: rgba(0,0,0,0.6);
           padding: 0.5rem;
+          border-top: 1px solid #aaa;
+          overflow: hidden;
         }
       }
       img {
