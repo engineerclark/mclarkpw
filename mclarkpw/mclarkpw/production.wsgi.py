@@ -9,10 +9,9 @@ https://docs.djangoproject.com/en/1.6/howto/deployment/wsgi/
 import os
 import sys
 
-virtualenv_dir = os.environ["VIRTUALENV_DIR"]
 
 # Activate your virtual env
-activate_env=os.path.join(virtualenv_dir,"/mclarkpw/bin/activate_this.py")
+activate_env="/var/envs/mclarkpw/bin/activate_this.py"
 execfile(activate_env, dict(__file__=activate_env))
 
 
