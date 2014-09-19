@@ -1,0 +1,325 @@
+@import "compass/reset";
+@import "fonts";
+
+/*** Color definitions ***/
+$darkblue: #0e1c38;
+$mediumblue: #0b2e74;
+$lightblue: #1a52c0;
+$lightestblue: #dce7fb;
+$tealblue: #00aeef;
+$teal: #71c0d3;
+$lavender: #440e62;
+
+$red: #ad132c;
+$rose: #ffb8b8;
+$lightred: #ffe5e9;
+
+$checkmark: #39b54a;
+/**************************/
+
+/*** constants ***/
+
+$gutter-width: 15px;
+
+$single-column-width: 70em;
+/*****************/
+
+
+/******************
+ * Shared elements
+ */
+html {
+  box-sizing: border-box;
+  font-size: 1.5em;
+  line-height: 1.7em;
+  background: #fff;
+  @media screen and (max-width: 100em) {
+    font-size: 1.2em;
+  }
+  @media screen and (max-width: 80em) {
+    font-size: 1.5em;  
+  }
+}
+
+*, *:before, *:after {
+  box-sizing: inherit; 
+}
+
+.fa {
+box-sizing: content-box;  
+}
+
+body {
+  background: #fff;
+  font-family: raleway, arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  
+}
+
+.markdown {
+  p {
+    margin-bottom: 1rem;  
+  }
+  em {
+    font-style: italic;  
+  }
+}
+
+.nobreak {
+  white-space: nowrap;  
+}
+
+.gutters {
+  border-width: 0 $gutter-width;
+  border-color: #fff;
+  border-style: solid;
+}
+
+h1 {
+  font-family: syncopate, arial, helvetica, sans-serif;
+  font-size: 3.95rem;
+  text-align: center;
+  line-height: 3.95rem;
+  margin: 2.5rem 0;  
+}
+h2 {
+  font-family: inherit;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+h3 {
+  font-family: inherit;
+  font-size: 1.33rem;
+  line-height: 1.33rem;  
+}
+
+.section {
+  color: $lightestblue;
+  font-family: raleway, arial, helvetica, sans-serif;
+  clear: both;
+  overflow: hidden;
+  border-bottom: $gutter-width solid #fff;
+  padding-bottom: 2rem;
+  
+  &.column {
+    clear: none;  
+  }
+}
+
+.button {
+  background: $lightblue;
+  color: $lightestblue;
+  width: 100%;
+  padding: 0 7%;
+  display: block;
+  line-height: 2rem;
+  margin: 1rem 0;
+  font-size: 1rem;
+}
+
+button.button {
+  border: 0;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+a.button {
+  text-decoration: none;  
+}
+
+header {
+  width: 100%;
+  text-align: center;
+  color: $darkblue;
+  padding: 0.6rem 25%;
+  position: relative;
+  font-family: syncopate, arial, sans-serif;
+  height: 3.5rem;
+  @media screen and (max-width: 80em) {
+    height: 7rem;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    height: auto;
+  }
+  
+  h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin: 0;
+    line-height: 1.25rem;
+    @media screen and (max-width: $single-column-width) {
+      font-size: 2.5rem;  
+      line-height: 2.5rem;
+    }
+  }
+  h2 {
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+    margin: 0;
+    @media screen and (max-width: $single-column-width) {
+      font-size: 1.5rem; 
+      line-height: 1.5rem;
+    }
+  }
+  .account {
+    width: 25%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.6rem;
+    
+    p {
+      height: 50%;
+      width: 100%;
+      white-space: nowrap;
+    }
+    
+    @media screen and (max-width: 80em) {
+      width: 100%;
+      position: relative;
+      height: auto;
+    }
+  }
+}
+
+nav {
+  border-right: $gutter-width solid #fff;
+  width: 25%;
+  height: calc(100% - 85px);
+  position: absolute;
+  top: 3.5rem;
+  right: 0;
+  transition: opacity 0.25s ease;
+  opacity: 1;
+  color: $lightestblue;
+  z-index: 100;
+  
+  a {
+    width: 100%;
+    height: calc(25% - #{$gutter-width});
+    margin-bottom: $gutter-width;
+    display: block;
+    background: $lightblue;
+    text-align: center;
+    color: inherit;
+    font-size: 5rem;
+    position: relative;
+    text-decoration: none;
+    box-sizing: border-box;
+    overflow: hidden;
+    
+    i.fa {
+      vertical-align: middle;
+      position: absolute;
+      top: 50%;
+      margin: auto;
+      width: 100%;
+      height: 500px;
+      line-height: 500px;
+      margin-top: calc(-250px);
+      display: block;
+    }
+    
+    b {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      content: '';
+      opacity: 0.0;
+      transition: opacity 0.25s ease;
+      background: rgba(14,28,56,0.65);
+      padding: 6%;
+      text-align: center;
+      font-size: 2rem;
+    }
+    &:hover b {
+      transition: opacity 0.25s ease;
+      opacity: 1.0;
+      
+    }
+  }
+  
+  &.docked {
+    position: fixed;
+    top: 0;
+    transition: opacity 0.25s ease;
+    opacity: 0.5;
+  }
+  
+  @media screen and (max-width: 80em) {
+    position: relative;
+    top: auto;
+    height: 7rem;
+    width: 100%;
+    border-width: 0 $gutter-width;
+    border-color: #fff;
+    border-style: solid;
+    
+    a {
+      width: 25%;
+      float: left;
+      height: 100%;
+    }
+    
+    &.docked {
+      position: inherit;
+      top: inherit;  
+    }
+  }
+}
+
+.maincontent {
+  @extend .gutters;
+  width: 75%;
+  float: left;
+  overflow: auto;
+  
+  @media screen and (max-width: 80em) {
+    width: 100%;
+    border-top: $gutter-width solid #fff;
+  }
+  
+}
+
+@mixin responsive-column {
+  @media screen and (max-width: $single-column-width) {
+    width: 100%;
+  }
+}
+.column {
+  float: left;
+  
+  &.gr-small {
+    width: calc(38% - #{$gutter-width}); 
+    margin-right: $gutter-width;
+    @include responsive-column;
+  }
+  
+  @include responsive-column;
+}
+
+.gr-small {
+  width: 38%;
+  @include responsive-column;
+}
+
+.gr-large {
+  width: 62%;
+  @include responsive-column;
+}
+/**************************/
+
+
+
+@import "about";
+@import "webdev";
+@import "enterprise";
+@import "contact";
+@import "login";
+

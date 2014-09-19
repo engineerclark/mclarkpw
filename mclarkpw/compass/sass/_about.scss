@@ -1,0 +1,209 @@
+/********************************
+ * About (home) page styles
+ */
+
+.bio {
+  background: $mediumblue;
+  color: $lightestblue;
+  padding-bottom: 0;
+  
+  em {
+    font-style: italic;
+  }
+  
+  .bio-box {
+    padding: 1rem 1.8rem;
+    line-height: 2rem;
+    border-bottom: $gutter-width solid #fff;
+    &:last-of-type {
+      border-bottom: none;
+    }
+    h2 {
+      color: $teal;
+    }
+    h3 {
+      color: $teal;
+      font-size: 1.25rem; 
+    }
+    p {
+      margin: 20px 0; 
+    }
+  }
+  
+  .bio-portrait {
+    width: 100%;
+    background: #fff;
+    overflow: auto;
+    text-align: center;
+    padding-bottom: $gutter-width;
+    
+    img {
+      margin: auto;
+      max-width: 100%;
+      display: block;
+    }
+  }
+  
+  .bio-talents {
+    background: $lavender;
+    min-height: 200px;
+    
+    li {
+      padding-left: 1.2em;
+      
+      &:before {
+        content: '';
+        color: $teal;
+        font-family: FontAwesome;
+        display: inline-block;
+        margin-left: -1.2em;
+        width: 1.2em;
+      }
+    }
+  }
+}
+
+.expertise {
+  background: $mediumblue;
+  
+  .area {
+    padding: 0 10% 6% 50%;
+    position: relative;
+    
+    %area-graphic {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 55%;      
+    }
+    
+    i.fa {
+      @extend %area-graphic;
+      font-size: 7.8rem;
+      opacity: 0.2;
+    }
+    
+    @media screen and (max-width: $single-column-width) {
+      padding: 0 10% 6%;
+      i.fa, .coding-graph {
+        display: none;  
+      }
+    }
+    
+    h2 {
+      margin-bottom: 0.5rem; 
+    }
+    
+    .coding-graph {
+      @extend %area-graphic;
+      width: 40%;
+      
+      .step {
+        text-align: right;
+        color: $darkblue;
+        width: 100%;
+        padding: 0 3%;
+        font-size: 0.7rem;
+        float: right;
+        line-height: 1.5rem;
+        height: 1.5rem;
+        overflow: hidden;
+        word-break: break-all;
+        
+        i {
+          display: block;
+          float: left;  
+        }
+        
+        &.beginning {
+          background: $lightestblue;
+        }
+        &.education {
+          background: $teal;
+          width: 80%;
+        }
+        &.pro {
+          background: $lightblue;
+          color: $lightestblue;
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+.summary {
+  width: 100%;
+  padding: 0 20%;
+  text-align: center;
+  
+  a.button {
+    width: auto;
+    display: inline-block;
+    color: $darkblue;
+    background: $lightestblue;
+  }
+  
+  a {
+    text-decoration: none;
+    color: $teal;  
+  }
+}
+.position, .school {
+  width: 100%;
+  padding: 0 20%;
+  overflow: auto;
+  margin-bottom: 2rem;
+  @media screen and (max-width: $single-column-width) {
+      padding: 0 10%;
+  }
+  
+  .info {
+    @extend .gr-small;
+    float: left;
+    text-align: right;
+    font-size: 1.25rem;
+    @media screen and (max-width: $single-column-width) {
+      text-align: left;  
+    }
+    
+    .title, .name {
+      font-weight: bold;  
+    }
+    .dates {
+      font-size: 1rem;
+    }
+  }
+  .description {
+    @extend .gr-large;
+    float: right;
+    text-align: left;
+    padding-left: 5%;
+    @media screen and (max-width: $single-column-width) {
+      padding-left: 0%;  
+    }
+  }
+}
+.positions {
+  background: $darkblue;
+  
+  .position .description {
+    color: $tealblue;  
+  }
+}
+
+.education {
+  background: $red;
+  color: $lightred;
+  
+  .summary {
+    a.button {
+      background: $lightred;
+      color: $red;  
+    }  
+  }
+  
+  .school .description {
+    color: $rose;  
+  }
+}

@@ -1,0 +1,16 @@
+.login {
+  background: $mediumblue;
+  
+  table {
+    width: 100%;
+    td {
+      vertical-align: middle;
+      padding-bottom: 1rem;
+    }
+  }
+  form {
+    input, textarea {
+      margin-bottom: 0;  
+    }
+  }
+}

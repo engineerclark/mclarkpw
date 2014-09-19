@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block maincontent %}
+<div class="contact section">
+    <h1>Message Sent</h1>
+    <div class="thankyou">
+        <h2>Thank you!</h2>
+        <h2>Your message has been sent to Michael.</h2>
+        <a class="button" href="{% url 'home' %}"><i class="fa fa-book"></i> return home</a>
+    </div>
+</div>
+{% endblock maincontent %}

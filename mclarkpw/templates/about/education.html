@@ -1,0 +1,25 @@
+<div class="education section">
+    <h1>education</h1>
+    <h1><i class="fa fa-graduation-cap"></i></h1>
+    {% if user.is_authenticated %}
+        {% for school in schools %}
+        <div class="school">
+	        <div class="info">
+	            <div class="name">{{ school.program }}</div>
+	            <div class="department">{{ school.school }}</div>
+	            <div class="dates">{{ school.start_date|date:'Y' }} - {% if not school.end_date %}Present{% else%}{{ school.end_date|date:'Y' }}{% endif %}</div>
+	        </div>
+	        <div class="description markdown">
+	            {{ school.render_description|safe }}
+	        </div>
+	    </div>
+        {% endfor %}
+    {% else %}
+    <div class="summary">
+        <p>
+            During my University education, I have focused on Computer Science, linguistics, and foreign language and culture studies.
+        </p>
+        <a class="button" href="{% url 'contact.main' %}"><i class="fa fa-send"></i> request more details</a>
+    </div>
+    {% endif %}
+</div>

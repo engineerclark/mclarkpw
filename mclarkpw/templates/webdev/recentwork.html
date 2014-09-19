@@ -1,0 +1,43 @@
+<script src="/static/js/portfolio.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+    	Portfolio.Init('.projects');
+    });
+</script>
+<div id="recent-work" class="recent-work projects section">
+    <h1>previous work</h1>
+    {% for project in projects %}
+    <div class="project" data-projectid="{{ project.id }}">
+	    <div class="info column gr-small">
+	    	<div class="subsection">
+		    	<h2>{{ project.name }}</h2>
+		    	<h3 class="project-url">
+		    	{% if project.url %}
+		    	<a href={{ project.url }} target="_blank">{{ project.url }}</a>
+		    	{% else %}
+		    	Not currently active
+		    	{% endif %}
+		    	</h3>
+		    	<div class="markdown">
+	    		  {{ project.render_description|safe }}
+	    		</div>
+		    </div>
+	    </div>
+	    <div class="screenshot column gr-large">
+	    	<img src="{{ project.screenshot_set.all.0.image.url }}" alt="" />
+	    </div>
+    </div>
+    {% endfor %}
+    <div class="thumbnails">
+    	{% for project in projects %}
+    	<div class="thumbnail">
+    		<a href="#" style="background-image: url('{{ project.screenshot_set.all.0.image.url }}');"
+    		      data-projectid="{{ project.id }}">
+    			<div class="label">
+    				{{ project.name }}
+    			</div>
+    		</a>
+    	</div>
+    	{% endfor %}
+    </div>
+</div>

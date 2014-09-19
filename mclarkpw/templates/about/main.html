@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+
+{% block maincontent %}
+<div class="bio section gr-small column">
+	<div class="bio-portrait">
+        <img src="{% static "images/mclark.jpg" %}" />
+    </div>
+    <div class="bio-text bio-box">
+    	<h2>about me</h2>
+    	<p>
+    		I’m a full-stack web developer, software engineer, amateur designer, and (as of 2013) father.
+    	</p>
+    	<p>
+            If you would like to engage me for a project, I want to hear from you!
+       </p>
+       <a class="button" href="{% url 'contact.main' %}"><i class="fa fa-send"></i> contact michael</a>
+    </div>
+    <div class="bio-talents bio-box">
+    	<h3>a few things I do well:</h3>
+    	<ul>
+    		<li>Turn <em>any</em> design into a beautiful HTML5/CSS3/JS user experience.</li>
+    		<li>Intuitive data models on top of clean, normalised databases.</li>
+    		<li>DRY</li>
+    	</ul>
+    </div>
+</div>
+
+<div class="expertise section gr-large column">
+    <h1>expertise</h1>
+    <div class="area">
+    	<i class="fa fa-code"></i>
+    	<div class="text">
+    	   <h2>web dev</h2>
+    	   <p>
+    			I specialise in HTML5, CSS3, and JS on the front-end, as well as python, C#, Java, and PHP server-side.
+    	   </p>
+    	   <a href="{% url 'webdev.main' %}#recent-work" class="button">see my work</a>
+    	</div>
+    </div>
+    <div class="area">
+        <i class="fa fa-terminal"></i>
+        <div class="text">
+            <h2>admin/ops</h2>
+            <p>
+                I configure linux boxen and serve web applications on them.
+            </p>
+            <p>
+                I automate build and deployment processes.	
+            </p>
+        </div>
+    </div>
+    <div class="area">
+        <i class="fa fa-building"></i>
+        <div class="text">
+            <h2>enterprise</h2>
+            <p>
+                I work with service-oriented architecture and large relational databases. 
+            </p>
+        </div>
+    </div>
+    <div class="area">
+        <div class="coding-graph">
+        	<div class="beginning step">
+        		<i>1991</i>
+        		for fun and profit
+        	</div>
+            <div class="education step">
+                <i>1998</i>
+                formal CS education
+            </div>
+        	<div class="pro step">
+                <i>2008</i>
+                professional
+            </div>
+        </div>
+        <div class="text">
+            <h2>coding since 1991</h2>
+        </div>
+    </div>
+</div>
+
+{% include "about/positions.html" %}
+{% include "about/education.html" %}
+
+{% endblock maincontent %}

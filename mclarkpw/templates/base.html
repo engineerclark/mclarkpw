@@ -1,0 +1,35 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{% block title %}Michael Clark{% endblock title %}</title>
+		{% block styles %}
+		    <link rel="stylesheet" href="{% static 'css/screen.css' %}" type="text/css" />
+		    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css" />
+		{% endblock styles %}
+            <script type="text/javascript" src="{% static 'js/jquery-2.1.1.min.js' %}"></script>
+            <script type="text/javascript" src="{% static 'js/nav.js' %}"></script> 
+		{% block scripts %}
+		
+		{% endblock scripts %}
+	</head>
+	<body>
+		<header>
+			{% include 'header.html' %}
+		</header>
+		<nav>
+			<a href="{% url 'about.main' %}"><i class="fa fa-book"></i><b>about michael</b></a>
+			<a href="{% url 'webdev.main' %}"><i class="fa fa-code"></i><b>web development</b></a>
+			<a href="{% url 'enterprise.main' %}"><i class="fa fa-building"></i><b>enterprise</b></a>
+			<a href="{% url 'contact.main' %}"><i class="fa fa-send"></i><b>contact michael</b></a>
+		</nav>
+		<div class="maincontent">
+			{% block maincontent %}
+			
+			{% endblock maincontent %}
+		</div>
+		<footer>
+			
+		</footer>		
+	</body>
+</html>

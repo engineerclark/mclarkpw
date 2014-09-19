@@ -10,7 +10,18 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+from unipath import Path
+from datetime import timedelta
+
+PROJECT_DIR = Path(__file__).ancestor(3)
+MEDIA_ROOT = PROJECT_DIR.child("media")
+STATIC_ROOT = PROJECT_DIR.child("static")
+STATICFILES_DIRS = (
+    PROJECT_DIR.child("assets"),
+)
+TEMPLATE_DIRS = (
+    PROJECT_DIR.child("templates"),
+)
 
 
 # Quick-start development settings - unsuitable for production
@@ -36,6 +47,12 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'about',
+    'webdev',
+    'enterprise',
+    'contact',
+    'portal',
+    'south',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -55,12 +72,12 @@ WSGI_APPLICATION = 'mclarkpw.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
@@ -80,3 +97,23 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+
+# Authentication settings
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'portal.auth.TokenAuthBackend',
+)
+LOGIN_REDIRECT_URL = '/'
+DEFAULT_AUTHTOKEN_EXP = timedelta(days=7)
+
+# Email backend settings
+EMAIL_HOST = os.environ['EMAIL_HOST']
+EMAIL_PORT = os.environ['EMAIL_PORT']
+EMAIL_HOST_USER = os.environ['EMAIL_HOST_USER']
+EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD']
+EMAIL_USE_TLS = os.environ['EMAIL_USE_TLS'] == 'True'
+MAIL_FROM = 'MCLARK.PW <mclark@mclark.pw>'
+MESSAGES_TO = ['mclark@mclark.pw']
+MAX_DAILY_MESSAGES = 1000
+
