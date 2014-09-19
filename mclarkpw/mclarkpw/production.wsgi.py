@@ -12,8 +12,8 @@ import sys
 
 # Activate your virtual env
 activate_env="/var/envs/mclarkpw/bin/activate_this.py"
-execfile(activate_env, dict(__file__=activate_env))
-
+#execfile(activate_env, dict(__file__=activate_env))
+exec(compile(open(activate_env, "rb").read(), activate_env, 'exec'), dict(__file__=activate_env))
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mclarkpw.settings.production")
 
