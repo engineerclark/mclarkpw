@@ -20,5 +20,6 @@ DATABASES = {
 
 ALLOWED_HOSTS = [
     '.mclark.pw',
-    '.mclark.pw.',
+    'www.mclark.pw',
+    'localhost',
 ]
