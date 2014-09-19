@@ -17,3 +17,8 @@ DATABASES = {
         'PASSWORD': dbpass
     }
 }
+
+ALLOWED_HOSTS = [
+    '.mclark.pw',
+    '.mclark.pw.',
+]
